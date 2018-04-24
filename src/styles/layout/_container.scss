@@ -1,0 +1,12 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 20px;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

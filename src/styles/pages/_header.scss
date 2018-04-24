@@ -1,0 +1,195 @@
+.navbar {
+  display: block;
+  background-color: map-get($color, gray-light);
+  border-bottom: 1px solid map-get($color, gray-line);
+  .bars-btn {
+    @include transition(0.3s);
+    color: map-get($color, secondary);
+    font-size: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 11px 10px;
+    &:hover {
+      color: map-get($color, primary);
+    }
+  }
+  .navbar-right {
+    display: block;
+    text-align: right;
+  }
+  .navbar-menu {
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+    li {
+      display: inline-block;
+    }
+    a {
+      @include transition(0.2s);
+      display: block;
+      font-size: 22px;
+      color: map-get($color, secondary);
+      padding: 5px 8px;
+      &:hover {
+        color: map-get($color, primary);
+      }
+      fa-icon {
+        line-height: 1em;
+      }
+    }
+    .notify {
+      position: relative;
+      top: -25px;
+      right: 0;
+      .point {
+        position: absolute;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: map-get($color, red);
+        border-radius: 50%;
+        &:before {
+          @include animation(0s, 1s, beatHeart, infinite);
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid map-get($color, red);
+          background-color: transparent;
+          z-index: 999;
+        }
+      }
+    }
+  }
+  .profile-dropdown {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    background-color: map-get($color, gray-light);
+  }
+  .profile-dropdown-btn-active {
+    @include transition(0.2s);
+    display: block;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: map-get($color, primary);
+    background-color: map-get($color, gray-line);
+    .avatar {
+      width: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    span {
+      padding-left: 5px;
+      fa-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+  .profile-dropdown-btn {
+    @include transition(0.2s);
+    display: block;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: map-get($color, secondary);
+    &:hover {
+      color: map-get($color, primary);
+      background-color: map-get($color, gray-line);
+    }
+    .avatar {
+      width: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    span {
+      padding-left: 5px;
+      fa-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+  .profile-dropdown-content-hidden {
+    @include transition(0.3s);
+    display: inline-block;
+    @include scale(0);
+    position: absolute;
+    background-color: map-get($color, gray-light);
+    border: 1px solid map-get($color, gray-line);
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    li {
+      display: block;
+    }
+    a {
+      @include transition(0.2s);
+      display: block;
+      text-decoration: none;
+      color: map-get($color, secondary);
+      padding: 10px 15px;
+      &:hover {
+        color: map-get($color, primary);
+        background-color: map-get($color, gray-line);
+      }
+      span {
+        padding-left: 10px;
+      }
+    }
+  }
+  .profile-dropdown-content {
+    @include transition(0.8s);
+    display: inline-block;
+    position: absolute;
+    background-color: map-get($color, gray-light);
+    border: 1px solid map-get($color, gray-line);
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    @include scale(1);
+    opacity: 1;
+    visibility: visible;
+    li {
+      display: block;
+    }
+    a {
+      @include transition(0.2s);
+      display: block;
+      text-decoration: none;
+      color: map-get($color, secondary);
+      padding: 10px 15px;
+      &:hover {
+        color: map-get($color, primary);
+        background-color: map-get($color, gray-line);
+      }
+      span {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@keyframes beatHeart {
+  0% {
+    @include transform(
+      translate(-50%, -50%)
+      scale(0)
+    );
+    opacity: 1;
+  }
+  100% {
+    @include transform(
+      translate(-50%, -50%)
+      scale(2)
+    );
+    opacity: 0;
+  }
+}

@@ -1,0 +1,67 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+        <button type="button" class="bars-btn">
+          <fa-icon [icon] = "['fas', 'bars']"></fa-icon>
+        </button>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+        <div class="navbar-right">
+          <ul class="navbar-menu">
+            <li>
+              <a href="#" title="notification">
+                <fa-icon [icon] = "['far', 'bell']"></fa-icon>
+                <div class="notify">
+                  <span class="heartbit"></span>
+                  <span class="point"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="message">
+                <fa-icon [icon] = "['far', 'envelope']"></fa-icon>
+                <div class="notify">
+                  <span class="heartbit"></span>
+                  <span class="point"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="profile-dropdown">
+            <a class="profile-dropdown-btn">
+              <img src="../../../../assets/images/ava.jpg" alt="avatar" class="avatar">
+              <span>John Doe <fa-icon [icon] = "['fas', 'caret-down']"></fa-icon></span>
+            </a>
+            <ul class="profile-dropdown-content">
+              <li>
+                <a href="#">
+                  <fa-icon [icon] = "['fas', 'user-circle']"></fa-icon>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <fa-icon [icon] = "['fas', 'credit-card']"></fa-icon>
+                  <span>Balance</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <fa-icon [icon] = "['fas', 'cog']"></fa-icon>
+                  <span>Setting</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <fa-icon [icon] = "['fas', 'sign-out-alt']"></fa-icon>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
