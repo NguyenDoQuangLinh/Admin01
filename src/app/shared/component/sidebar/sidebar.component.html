@@ -6,64 +6,89 @@
   <ul class="sidebar-menu">
     <h3 class="group-menu-title">General</h3>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'tachometer-alt']"></fa-icon>
         <span>Dashboard</span>
       </a>
     </li>
-    <li class="sidebar-dropdown-btn">
-      <a >
+    <li>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'chart-pie']"></fa-icon>
         <span>Chart</span>
-        <fa-icon class="arrow-icon" [icon]="['fas', 'angle-right']"></fa-icon>
       </a>
     </li>
     <li class="sidebar-dropdown-btn">
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'table']"></fa-icon>
         <span>Table</span>
+        <fa-icon class="arrow-icon" [icon]="['fas', 'angle-right']"></fa-icon>
       </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="#">Basic Table</a>
+        </li>
+        <li>
+          <a href="#">Data Table</a>
+        </li>
+      </ul>
+      <span class="line-js"></span>
     </li>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'edit']"></fa-icon>
         <span>Form</span>
       </a>
     </li>
     <h3 class="group-menu-title">Live On</h3>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'laptop']"></fa-icon>
         <span>UI Element</span>
       </a>
     </li>
-    <li>
-      <a>
+    <li class="sidebar-dropdown-btn">
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'folder']"></fa-icon>
         <span>Sample Pages</span>
+        <fa-icon class="arrow-icon" [icon]="['fas', 'angle-right']"></fa-icon>
       </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="#">404 Error</a>
+        </li>
+        <li>
+          <a href="#">500 Error</a>
+        </li>
+        <li>
+          <a href="#">Login Page</a>
+        </li>
+        <li>
+          <a href="#">Register Page</a>
+        </li>
+      </ul>
+      <span class="line-js"></span>
     </li>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'user']"></fa-icon>
         <span>Profile</span>
       </a>
     </li>
     <h3 class="group-menu-title">About</h3>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'book']"></fa-icon>
         <span>Documentation</span>
       </a>
     </li>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fab', 'wikipedia-w']"></fa-icon>
         <span>Wiki</span>
       </a>
     </li>
     <li>
-      <a>
+      <a class="menu-item-link">
         <fa-icon [icon]="['fas', 'info-circle']"></fa-icon>
         <span>About Us</span>
       </a>

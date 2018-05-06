@@ -1,4 +1,5 @@
 .main {
+  @include transition(0.3s);
   display: block;
   width: calc(100% - 250px);
   margin-left: 250px;

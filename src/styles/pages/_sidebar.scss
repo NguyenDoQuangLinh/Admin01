@@ -1,4 +1,5 @@
 .sidebar {
+  @include transition(0.5s);
   max-width: 250px;
   width: 100%;
   height: 100%;
@@ -13,30 +14,38 @@
   display: block;
   padding: 10px 10px 15px 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
   img {
     vertical-align: bottom;
   }
   h1 {
+    @include transition(0.3s);
     display: inline-block;
     font-family: $default-font;
     color: map-get($color, white);
     font-size: 25px;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .sidebar-menu {
   display: block;
   .group-menu-title {
+    @include transition(0.2s);
+    display: block;
     font-size: 16px;
     font-weight: 500;
     color: map-get($color, white);
     text-shadow:2px 2px 2px map-get($color, black);
     padding: 15px 0 10px 20px;
+    white-space: nowrap;
   }
   li {
+    @include transition(0.3s);
     display: block;
   }
   a {
-    @include transition(0.2s);
+    @include transition(0.3s);
     display: block;
     font-size: 15px;
     font-weight: 400;
@@ -47,15 +56,22 @@
     opacity: 0.4;
     outline: none;
     cursor: pointer;
+    white-space: nowrap;
     &:hover {
       opacity: 1;
     }
   }
   span {
+    @include transition(0.3s);
     padding-left: 10px;
+    visibility: visible;
+    opacity: 1;
   }
   .sidebar-dropdown-btn {
     position: relative;
+    .menu-item-link {
+      position: relative;
+    }
     .arrow-icon {
       @include transition(0.3s);
       @include translateY(-50%);
@@ -63,15 +79,143 @@
       right: 20px;
       top: 50%;
     }
+    .line-js {
+      @include transition(0.4s);
+      display: inline-block;
+      position: absolute;
+      width: 5px;
+      top: 0;
+      right: 0;
+      padding: 0;
+      background-color: map-get($color, success);
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   .sidebar-dropdown-btn-active {
     position: relative;
+    .menu-item-link {
+      position: relative;
+      background: linear-gradient(#334556,#2C4257),#2A3F54;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
     .arrow-icon {
       @include transition(0.3s);
       @include rotate(90);
       position: absolute;
       right: 20px;
       top: 30%;
+    }
+    .line-js-active {
+      @include transition(0.4s);
+      display: inline-block;
+      position: absolute;
+      width: 5px;
+      top: 0;
+      right: 0;
+      padding: 0;
+      background-color: map-get($color, success);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .sidebar-submenu-hidden {
+    @include transition(0.4s);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    li {
+      display: block;
+      position: relative;
+      border-left: 1px solid map-get($color, white);
+      margin-left: 27px;
+      &:before {
+        @include translate(50%, -50%);
+        @include transition(0.3s);
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        right: 100%;
+        border-radius: 50%;
+        border: 1px solid map-get($color, white);
+        background-color: map-get($color, primary);
+      }
+      &:hover {
+        &:before {
+          background-color: map-get($color, white);
+        }
+      }
+    }
+  }
+  .sidebar-submenu {
+    @include transition(0.4s);
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    li {
+      display: block;
+      position: relative;
+      border-left: 1px solid map-get($color, white);
+      margin-left: 27px;
+      &:before {
+        @include translate(50%, -50%);
+        @include transition(0.3s);
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        right: 100%;
+        border-radius: 50%;
+        border: 1px solid map-get($color, white);
+        background-color: map-get($color, primary);
+      }
+      &:hover {
+        &:before {
+          background-color: map-get($color, white);
+        }
+      }
+    }
+  }
+}
+
+.sidebar-minimize {
+  @include transition(0.5s);
+  max-width: 75px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: map-get($color, primary);
+  overflow-x: hidden;
+  .head-sidebar {
+    h1 {
+      @include transition(0.3s);
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .sidebar-menu {
+    .group-menu-title {
+      @include transition(0.2s);
+      height: 0;
+    }
+    .menu-item-link {
+      span {
+        @include transition(0.3s);
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 }
