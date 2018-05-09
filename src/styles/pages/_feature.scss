@@ -1,6 +1,25 @@
 .main {
-  @include transition(0.3s);
+  @include transition(0.5s);
   display: block;
   width: calc(100% - 250px);
   margin-left: 250px;
+}
+.main-expand {
+  @include transition(0.5s);
+  display: block;
+  width: calc(100% - 75px);
+  margin-left: 75px;
+  .container {
+    @include transition(0.7s);
+    display: block;
+    margin: 0 auto;
+    max-width: 1550px;
+    width: 100%;
+    padding: 0 20px;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
 }

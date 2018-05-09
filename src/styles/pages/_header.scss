@@ -5,13 +5,13 @@
   .bars-btn {
     @include transition(0.3s);
     color: map-get($color, secondary);
-    font-size: 30px;
+    font-size: 29px;
     background-color: transparent;
     cursor: pointer;
     outline: none;
     border: none;
     border-radius: 3px;
-    padding: 11px 10px;
+    padding: 10px;
     &:hover {
       color: map-get($color, primary);
     }

@@ -13,6 +13,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   submenu: any;
   barsBtn: any;
   sidebar: any;
+  main: any;
 
   constructor() { }
 
@@ -24,6 +25,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.submenu = $('.sidebar-submenu');
     this.barsBtn = $('.bars-btn');
     this.sidebar = $('.sidebar');
+    this.main = $('.main');
     for(let i of this.dropdownBtn) {
       i.setAttribute('dropdown', false);
       i.setAttribute('height', i.clientHeight);
@@ -76,10 +78,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       minimize = true;
       this.sidebar.toggleClass('sidebar');
       this.sidebar.toggleClass('sidebar-minimize');
+      this.main.toggleClass('main-expand');
+      this.main.toggleClass('main');
     } else {
       minimize = false;
       this.sidebar.toggleClass('sidebar-minimize');
       this.sidebar.toggleClass('sidebar');
+      this.main.toggleClass('main');
+      this.main.toggleClass('main-expand');
     }
     this.barsBtn.attr('minimize', minimize);
   }
