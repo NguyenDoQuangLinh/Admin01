@@ -37,15 +37,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       }
       this.overview.push(obj);
     }
-    // console.log(this.overview);
-    // this.overviewProgress = $('.overview-progress');
-    // this.overviewNumber = $('.overview-data-number');
-    // let progressLength = this.overviewProgress.length;
-    // for(let i = 0; i < progressLength; i++) {
-    //   this.overviewProgress[i].style.width = percent[i] + '%';
-    //   let temp = number[i].toLocaleString('en-us', {minimumFractionDigits: 0});
-    //   this.overviewNumber[i].innerHTML = temp;
-    // }
   }
 
 }
