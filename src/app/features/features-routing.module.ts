@@ -6,7 +6,18 @@ import { FeaturesComponent } from './features.component'
 const routes: Routes = [
   {
     path: '',
-    component: FeaturesComponent
+    component: FeaturesComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: './dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: '',
+        redirectTo:'dashboard',
+        pathMatch: 'full'
+      },
+    ]
   }
 ];
 

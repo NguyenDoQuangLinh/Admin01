@@ -3,12 +3,43 @@
   display: block;
   width: calc(100% - 250px);
   margin-left: 250px;
+  background-color: map-get($color, bg-primary);
+  min-height: 100vh;
+  .main-content {
+    padding: 20px 0;
+  }
+  .direct {
+    display: block;
+    font-family: $default-font;
+    border-radius: 2px;
+    background-color: map-get($color, white);
+    .direct-title {
+      font-weight: 500;
+      display: block;
+      line-height: 1em;
+      color: map-get($color, gray);
+    }
+    .direct-sub-title {
+      display: block;
+      font-style: italic;
+      line-height: 1.5em;
+      font-size: 14px;
+      margin-top: 5px;
+      color: map-get($color, gray);
+      strong {
+        opacity: 1;
+        color: map-get($color, primary);
+      }
+    }
+  }
 }
 .main-expand {
   @include transition(0.5s);
   display: block;
   width: calc(100% - 75px);
   margin-left: 75px;
+  background-color: map-get($color, bg-primary);
+  min-height: 100vh;
   .container {
     @include transition(0.7s);
     display: block;
@@ -20,6 +51,33 @@
       content: "";
       display: table;
       clear: both;
+    }
+  }
+  .main-content {
+    padding: 20px 0;
+  }
+  .direct {
+    display: block;
+    font-family: $default-font;
+    border-radius: 2px;
+    background-color: map-get($color, white);
+    .direct-title {
+      font-weight: 500;
+      display: block;
+      line-height: 1em;
+      color: map-get($color, gray);
+    }
+    .direct-sub-title {
+      display: block;
+      font-style: italic;
+      line-height: 1.5em;
+      font-size: 14px;
+      margin-top: 5px;
+      color: map-get($color, gray);
+      strong {
+        opacity: 1;
+        color: map-get($color, primary);
+      }
     }
   }
 }
