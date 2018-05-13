@@ -3,7 +3,7 @@
   display: block;
   width: calc(100% - 250px);
   margin-left: 250px;
-  background-color: map-get($color, bg-primary);
+  // background-color: map-get($color, bg-primary);
   min-height: 100vh;
   .main-content {
     padding: 20px 0;
@@ -38,7 +38,7 @@
   display: block;
   width: calc(100% - 75px);
   margin-left: 75px;
-  background-color: map-get($color, bg-primary);
+  // background-color: map-get($color, bg-primary);
   min-height: 100vh;
   .container {
     @include transition(0.7s);
