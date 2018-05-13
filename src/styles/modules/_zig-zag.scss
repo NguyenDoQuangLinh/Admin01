@@ -6,14 +6,14 @@
     left: 0;
     width: 100%;
     height: 0.5em;
-    background-size: 1em 100%;
-    background-position: center;
+    background-size: 1em 100% !important;
+    background-position: center !important;
   }
 }
 .zag {
   &:after {
     top: 100%;
-    background: linear-gradient(135deg, $color 33.333%, transparent 0),  linear-gradient(-135deg, $color 33.333%, transparent 0);
+    background: linear-gradient(135deg, map-get($color, white) 33.333%, transparent 0), linear-gradient(-135deg, map-get($color, white) 33.333%, transparent 0);
   }
 }
 .drop-shadow {

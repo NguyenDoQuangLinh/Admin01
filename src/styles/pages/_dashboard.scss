@@ -1,0 +1,46 @@
+.overview-item {
+  position: relative;
+  color: map-get($color, white);
+  background: linear-gradient(135deg,rgba(66, 103, 178, 1) 0,rgba(41, 72, 125, 1) 100%);
+  overflow: hidden;
+  .overview-data-title {
+    font-size: 15px;
+    margin-bottom: 2px;
+    opacity: 0.7;
+  }
+  .overview-data-number {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  .overview-data-progress-bar {
+    position: relative;
+    margin-bottom: 12px;
+    height: 2px;
+    background: rgba(0,0,0,.5);
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: .75rem;
+    .overview-progress {
+      @include transition(0.5s);
+      display: inline-block;
+      position: absolute;
+      background: map-get($color, white);
+      width: 70.1%;
+      height: 100%;
+    }
+  }
+  .overview-data-desc {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  .overview-icon {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    text-shadow: 3px 7px rgba(0,0,0,.25);
+    font-size: 128px;
+    opacity: 0.2;
+  }
+}
