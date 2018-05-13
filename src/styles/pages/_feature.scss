@@ -3,6 +3,29 @@
   display: block;
   width: calc(100% - 250px);
   margin-left: 250px;
+  .main-content {
+    padding: 20px 0;
+  }
+  .direct {
+    display: block;
+    .direct-title {
+      font-weight: 600;
+      display: block;
+      line-height: 1em;
+      color: map-get($color, gray);
+    }
+    .direct-sub-title {
+      display: block;
+      line-height: 1.5em;
+      font-size: 14px;
+      margin-top: 5px;
+      color: map-get($color, gray);
+      strong {
+        opacity: 1;
+        color: map-get($color, primary);
+      }
+    }
+  }
 }
 .main-expand {
   @include transition(0.5s);
@@ -21,5 +44,8 @@
       display: table;
       clear: both;
     }
+  }
+  .main-content {
+    padding: 20px 0;
   }
 }

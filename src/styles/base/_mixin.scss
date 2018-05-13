@@ -214,3 +214,11 @@
     animation-iteration-count: $loop;
     animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
+
+// Filter Drop-shadown
+@mixin dropshadown ($color, $vertical, $horizontal, $blur) {
+  -webkit-filter: drop-shadow($color $vertical $horizontal $blur);
+  -moz-filter: drop-shadow($color $vertical $horizontal $blur);
+  -o-filter: drop-shadow($color $vertical $horizontal $blur);
+  filter: drop-shadow($color $vertical $horizontal $blur);
+}

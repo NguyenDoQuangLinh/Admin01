@@ -42,7 +42,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.barsBtn.click(() => {
       this.minimizeSidebar(this.barsBtn.attr('minimize'));
     });
-    console.log(this.sidebar);
   }
 
   showDropdownContent(temp, obj) {
