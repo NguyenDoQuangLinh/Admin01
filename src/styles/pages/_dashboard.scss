@@ -72,17 +72,17 @@
 
 .notification-panel {
   padding: 0;
-  border-radius: 3px;
-  border: 1px solid map-get($color, line);
+  border-radius: 5px;
+  background-color: map-get($color, white);
   .panel-head {
-    background-color: map-get($color, bg-secondary);
     padding: 15px;
+    font-weight: 600;
   }
   .panel-body {
-    padding: 15px;
+    padding: 0 15px 15px;
     .noti-list {
       border: 1px solid map-get($color, line);
-      border-radius: 3px;
+      border-radius: 5px;
     }
     .noti-item {
       display: block;
@@ -100,8 +100,15 @@
         font-size: 13px;
         &:hover {
           @include transition(0.2s);
-          background-color: map-get($color, gray-light);
+          background-color: rgba(0, 0, 0, .1);
         }
+      }
+      .noti-type {
+        text-transform: capitalize;
+      }
+      .noti-icon {
+        display: inline-block;
+        width: 20px;
       }
       .noti-time {
         font-style: italic;
