@@ -39,7 +39,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     let noti_name = ['new comment', '3 new follower', 'message sent', 'new task', 'server rebooted', 'server crashed', 'server not responding', 'new order placed', 'payment recieved'];
     let noti_time = ['4 minutes ago', '12 minutes ago', '27 minutes ago', '43 minutes ago', '11:32 PM', '11:13 AM', '10:57 AM', '9:49 AM', 'Yesterday'];
-    // let noti_icon = ['comment', 'twitter', 'envelope', 'server', 'upload', 'bolt', 'exclamation-triangle', 'shopping-cart, money-bill-alt'];
     let noti_icon = [
       {
         prefix: 'fas',

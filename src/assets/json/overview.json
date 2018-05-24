@@ -1,0 +1,6 @@
+[
+  {'name': 'facebook', 'percent': 70.1, 'number': 7842900, 'icon': 'facebook-f'},
+  {'name': 'Twitter', 'percent': 40.5, 'number': 180200, 'icon': 'twitter'},
+  {'name': 'instagram', 'percent': 76.3, 'number': 38900, 'icon': 'instagram'},
+  {'name': 'google', 'percent': 54.9, 'number': 3988, 'icon': 'google'}
+]
