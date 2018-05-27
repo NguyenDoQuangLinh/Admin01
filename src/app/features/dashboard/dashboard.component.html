@@ -1,17 +1,47 @@
-<div class="row" *ngIf="overview">
-  <div class="col-lg-3 col-md-3 col-sm-6 col-6 overview-col" *ngFor="let item of overview">
-    <div class="card card-sm overview-item">
-      <div class="overview-data">
-        <p class="overview-data-title">{{item.name}}</p>
-        <p class="overview-data-number">{{item.number}}</p>
-        <div class="overview-data-progress-bar">
-          <div class="overview-progress" [style.width.%]="item.percent"></div>
+<section class="section-overview">
+  <div class="row" *ngIf="data.overview">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 overview-col" *ngFor="let item of data.overview">
+      <div class="card card-sm overview-item">
+        <div class="overview-data">
+          <p class="overview-data-title">{{item.name}}</p>
+          <p class="overview-data-number">{{item.number}}</p>
+          <div class="overview-data-progress-bar">
+            <div class="overview-progress" [style.width.%]="item.percent"></div>
+          </div>
+          <p class="overview-data-desc">Better than last week ({{item.percent}}%)</p>
         </div>
-        <p class="overview-data-desc">Better than last week ({{item.percent}})</p>
-      </div>
-      <div class="overview-icon">
-        <fa-icon [icon]="['fab', item.icon]"></fa-icon>
+        <div class="overview-icon">
+          <fa-icon [icon]="['fab', item.icon]"></fa-icon>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+<section class="section-dashboard-panel">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+      <div class="card card-sm notification-panel">
+        <div class="panel-head">
+          <fa-icon [icon] = "['far', 'bell']"></fa-icon>
+          <span>Notification Panel</span>
+        </div>
+        <div class="panel-body">
+          <ul class="noti-list" *ngIf="data.notification">
+            <li class="noti-item" *ngFor="let item of data.notification">
+              <a href="#" class="noti-item-detail">
+                <span class="noti-type">
+                  <fa-icon class="noti-icon" [icon]="[item.icon_prefix, item.icon_name]"></fa-icon>
+                  <span>{{item.name}}</span>
+                </span>
+                <span class="noti-time">{{item.time}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-6 col-6">
+
+    </div>
+  </div>
+</section>

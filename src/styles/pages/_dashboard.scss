@@ -69,3 +69,52 @@
     opacity: 0.2;
   }
 }
+
+.notification-panel {
+  padding: 0;
+  border-radius: 5px;
+  background-color: map-get($color, white);
+  .panel-head {
+    padding: 15px;
+    font-weight: 600;
+  }
+  .panel-body {
+    padding: 0 15px 15px;
+    .noti-list {
+      border: 1px solid map-get($color, line);
+      border-radius: 5px;
+    }
+    .noti-item {
+      display: block;
+      border-bottom: 1px solid map-get($color, line);
+      &:last-child {
+        border: none;
+      }
+      .noti-item-detail {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include transition(0.3s);
+        text-decoration: none;
+        color: map-get($color, black);
+        padding: 10px 15px;
+        font-size: 13px;
+        opacity: 0.6;
+        &:hover {
+          @include transition(0.2s);
+          background-color: rgba(0, 0, 0, .085);
+          opacity: 1;
+        }
+      }
+      .noti-type {
+        text-transform: capitalize;
+      }
+      .noti-icon {
+        display: inline-block;
+        width: 20px;
+      }
+      .noti-time {
+        font-style: italic;
+      }
+    }
+  }
+}
