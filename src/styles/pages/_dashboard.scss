@@ -98,9 +98,11 @@
         color: map-get($color, black);
         padding: 10px 15px;
         font-size: 13px;
+        opacity: 0.6;
         &:hover {
           @include transition(0.2s);
           background-color: rgba(0, 0, 0, .085);
+          opacity: 1;
         }
       }
       .noti-type {
