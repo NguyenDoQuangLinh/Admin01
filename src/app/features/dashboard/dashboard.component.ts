@@ -20,25 +20,23 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   constructor(private apiService: APIService) { }
 
   ngOnInit() {
+    this.canvas = document.getElementById('my-chart');
+    this.ctx = this.canvas.getContext('2d');
     this.subcription = this.apiService.getDashboard(ENDPOINT.dashboardData).subscribe(res => {
       this.data = res;
       for(let i of this.data.overview) {
         i.number = i.number.toLocaleString();
       }
-    });
-  }
 
-  ngAfterViewInit() {
-    this.canvas = document.getElementById('myChart');
-    this.ctx = this.canvas.getContext('2d');
-    let myChart = new Chart(this.ctx, {
-      type: 'line',
-      data: {
+      let chartConfig = {
+        type: 'line',
+        data: {
           labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          // width: '50%',
           datasets: [
             {
               label: 'Facebook',
-              data: [20, 83, 12, 55, 35, 41, 73],
+              data: this.data.statistic.facebook,
               backgroundColor: 'rgba(66, 103, 178, .5)',
               borderColor: 'rgba(0, 109, 191, 1)',
               borderWidth: 1,
@@ -46,19 +44,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
               pointRadius: 5,
               pointBorderColor: 'rgba(0, 0, 0, 1)'
             },
-            // {
-            //   label: 'Twitter',
-            //   data: [64, 27, 77, 43, 58, 92, 72],
-            //   backgroundColor: 'rgba(29, 161, 242, .5)',
-            //   borderColor: 'rgba(0, 109, 191, 1)',
-            //   borderWidth: 1,
-            //   pointStyle: 'rectRot',
-            //   pointRadius: 5,
-            //   pointBorderColor: 'rgba(0, 0, 0, 1)'
-            // },
             {
               label: 'Instagram',
-              data: [33, 21, 42, 73, 26, 63, 96],
+              data: this.data.statistic.instagram,
               backgroundColor: 'rgba(233, 89, 80, .5)',
               borderColor: 'rgba(205, 72, 107, 1)',
               borderWidth: 1,
@@ -66,31 +54,25 @@ export class DashboardComponent implements OnInit, AfterViewInit {
               pointRadius: 5,
               pointBorderColor: 'rgba(0, 0, 0, 1)'
             }
-            // {
-            //   label: 'Google',
-            //   data: [56, 32, 63, 22, 36, 73, 92],
-            //   backgroundColor: 'rgba(223, 75, 55, .5)',
-            //   borderColor: 'rgba(219, 50, 54, 1)',
-            //   borderWidth: 1,
-            //   pointStyle: 'rectRot',
-            //   pointRadius: 5,
-            //   pointBorderColor: 'rgba(0, 0, 0, 1)'
-            // },
           ]
         },
-      options: {
-        title: {
+        options: {
+          title: {
+            display: true,
+            text: 'Social Statistic 2018',
+            fontColor: "#000000",
+            fontSize: 14
+          },
+          responsive: false,
           display: true,
-          text: 'Social Statistic 2018',
-          fontColor: "#000000",
-          fontSize: 14
-        },
-        responsive: true,
-        display: true,
-        responsiveAnimationDuration: 1500,
-        maintainAspectRatio: false
+          // responsiveAnimationDuration: 1500
+        }
       }
+
+      let myChart = new Chart(this.ctx, chartConfig);
     });
   }
+
+  ngAfterViewInit() { }
 
 }

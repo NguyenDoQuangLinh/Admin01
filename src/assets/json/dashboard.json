@@ -15,5 +15,9 @@
     {"name": "server not responding", "time": "10:57 AM", "icon_prefix": "fas", "icon_name": "exclamation-triangle"},
     {"name": "new older placed", "time": "09:49 AM", "icon_prefix": "fas", "icon_name": "shopping-cart"},
     {"name": "payment received", "time": "Yesterday", "icon_prefix": "fas", "icon_name": "money-bill-alt"}
-  ]
+  ],
+  "statistic": {
+    "facebook": [20, 83, 12, 55, 35, 41, 73],
+    "instagram": [33, 21, 42, 73, 26, 63, 96]
+  }
 }
