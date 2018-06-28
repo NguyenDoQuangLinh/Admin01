@@ -33,6 +33,7 @@
     font-size: 15px;
     margin-bottom: 2px;
     opacity: 0.7;
+    text-transform: capitalize;
   }
   .overview-data-number {
     font-size: 24px;
@@ -116,5 +117,13 @@
         font-style: italic;
       }
     }
+  }
+}
+.chart-panel {
+  background-color: map-get($color, white);
+  border-radius: 5px;
+  padding: 12px 10px 20px 10px;
+  .my-chart {
+    margin: 0 auto;
   }
 }

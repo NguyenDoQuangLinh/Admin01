@@ -1,6 +1,6 @@
 <section class="section-overview">
-  <div class="row" *ngIf="data.overview">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6 overview-col" *ngFor="let item of data.overview">
+  <div class="row" *ngIf="data">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-12 overview-col" *ngFor="let item of data.overview">
       <div class="card card-sm overview-item">
         <div class="overview-data">
           <p class="overview-data-title">{{item.name}}</p>
@@ -19,14 +19,14 @@
 </section>
 <section class="section-dashboard-panel">
   <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
       <div class="card card-sm notification-panel">
         <div class="panel-head">
           <fa-icon [icon] = "['far', 'bell']"></fa-icon>
           <span>Notification Panel</span>
         </div>
         <div class="panel-body">
-          <ul class="noti-list" *ngIf="data.notification">
+          <ul class="noti-list" *ngIf="data">
             <li class="noti-item" *ngFor="let item of data.notification">
               <a href="#" class="noti-item-detail">
                 <span class="noti-type">
@@ -40,8 +40,10 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-6 col-6">
-
+    <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+      <div class="card card-sm chart-panel">
+        <canvas id="my-chart" class="my-chart" width="660" height="338"></canvas>
+      </div>
     </div>
   </div>
 </section>

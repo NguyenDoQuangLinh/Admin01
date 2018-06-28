@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -21,10 +22,12 @@ const LAYOUT_COMPONENT = [
   imports: [
     CommonModule,
     FontAwesomeModule,
+    RouterModule
   ],
   exports: [
     FontAwesomeModule,
-    LAYOUT_COMPONENT
+    LAYOUT_COMPONENT,
+    RouterModule
   ],
   declarations: [LAYOUT_COMPONENT]
 })
