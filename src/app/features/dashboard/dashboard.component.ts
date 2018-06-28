@@ -32,7 +32,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         type: 'line',
         data: {
           labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          // width: '50%',
           datasets: [
             {
               label: 'Facebook',
@@ -63,9 +62,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             fontColor: "#000000",
             fontSize: 14
           },
-          responsive: false,
           display: true,
-          // responsiveAnimationDuration: 1500
+          responsive: true,
+          responsiveAnimationDuration: 1500
         }
       }
 

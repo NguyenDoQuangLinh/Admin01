@@ -6,7 +6,7 @@
   <ul class="sidebar-menu">
     <h3 class="group-menu-title">General</h3>
     <li>
-      <a class="menu-item-link">
+      <a class="menu-item-link" routerLink="/" routerLinkActive="active">
         <fa-icon class="sidebar-icon" [icon]="['fas', 'tachometer-alt']"></fa-icon>
         <span>Dashboard</span>
       </a>
@@ -25,7 +25,7 @@
       </a>
       <ul class="sidebar-submenu">
         <li>
-          <a href="#">Basic Table</a>
+          <a routerLink="/table" routerLinkActive="active">Basic Table</a>
         </li>
         <li>
           <a href="#">Data Table</a>
